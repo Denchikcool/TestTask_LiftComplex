@@ -1,0 +1,36 @@
+﻿<Window x:Class="DictionaryOfOrganizationsAndEmployees.EditPersonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DictionaryOfOrganizationsAndEmployees"
+        mc:Ignorable="d"
+        Title="EditPersonWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="ФИО:" Margin="10"/>
+        <TextBox x:Name="FullNameTextBox" 
+             Grid.Row="1" Margin="10"
+             Text="{Binding FullName}"/>
+        <TextBlock Grid.Row="2" Text="Должность:" Margin="10"/>
+        <TextBox x:Name="PositionTextBox" 
+             Grid.Row="3" Margin="10"
+             Text="{Binding Position}"/>
+        <TextBlock Grid.Row="4" Text="Телефон:" Margin="10"/>
+        <TextBox x:Name="PhoneNumberTextBox" 
+             Grid.Row="5" Margin="10"
+             Text="{Binding PhoneNumber}"/>
+        <Button x:Name="SaveButton" 
+            Grid.Row="6" Margin="10" 
+            Content="Сохранить" 
+            Click="SaveButton_Click"/>
+    </Grid>
+</Window>
