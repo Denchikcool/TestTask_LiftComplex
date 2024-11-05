@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Studing\\TestTask_LiftComplex\\TestTask_LiftComplex\\DictionaryOfOrganizationsAndEmployees\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{661BEDCC-DAA7-481D-977E-ECDA48EE3365}|DictionaryOfOrganizationsAndEmployees.csproj|d:\\studing\\testtask_liftcomplex\\testtask_liftcomplex\\dictionaryoforganizationsandemployees\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{661BEDCC-DAA7-481D-977E-ECDA48EE3365}|DictionaryOfOrganizationsAndEmployees.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{661BEDCC-DAA7-481D-977E-ECDA48EE3365}|DictionaryOfOrganizationsAndEmployees.csproj|d:\\studing\\testtask_liftcomplex\\testtask_liftcomplex\\dictionaryoforganizationsandemployees\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{661BEDCC-DAA7-481D-977E-ECDA48EE3365}|DictionaryOfOrganizationsAndEmployees.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BEDCC-DAA7-481D-977E-ECDA48EE3365}|DictionaryOfOrganizationsAndEmployees.csproj|d:\\studing\\testtask_liftcomplex\\testtask_liftcomplex\\dictionaryoforganizationsandemployees\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{661BEDCC-DAA7-481D-977E-ECDA48EE3365}|DictionaryOfOrganizationsAndEmployees.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{661BEDCC-DAA7-481D-977E-ECDA48EE3365}|DictionaryOfOrganizationsAndEmployees.csproj|d:\\studing\\testtask_liftcomplex\\testtask_liftcomplex\\dictionaryoforganizationsandemployees\\editorganizationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,8 +50,7 @@
               "RelativeToolTip": "EditPersonWindow.xaml.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAwA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T05:46:00.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T05:46:00.255Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "EditOrganizationWindow.xaml.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAwA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T05:44:45.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T05:44:45.793Z"
             },
             {
               "$type": "Document",
@@ -75,8 +73,7 @@
               "ToolTip": "D:\\Studing\\TestTask_LiftComplex\\TestTask_LiftComplex\\DictionaryOfOrganizationsAndEmployees\\EditPersonWindow.xaml",
               "RelativeToolTip": "EditPersonWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T05:43:05.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T05:43:05.569Z"
             },
             {
               "$type": "Document",
@@ -87,30 +84,28 @@
               "ToolTip": "D:\\Studing\\TestTask_LiftComplex\\TestTask_LiftComplex\\DictionaryOfOrganizationsAndEmployees\\EditOrganizationWindow.xaml",
               "RelativeToolTip": "EditOrganizationWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T05:42:44.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Studing\\TestTask_LiftComplex\\TestTask_LiftComplex\\DictionaryOfOrganizationsAndEmployees\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\Studing\\TestTask_LiftComplex\\TestTask_LiftComplex\\DictionaryOfOrganizationsAndEmployees\\MainWindow.xaml*",
-              "RelativeToolTip": "MainWindow.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T05:40:09.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T05:42:44.965Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Studing\\TestTask_LiftComplex\\TestTask_LiftComplex\\DictionaryOfOrganizationsAndEmployees\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\Studing\\TestTask_LiftComplex\\TestTask_LiftComplex\\DictionaryOfOrganizationsAndEmployees\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-04T05:40:09.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Studing\\TestTask_LiftComplex\\TestTask_LiftComplex\\DictionaryOfOrganizationsAndEmployees\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\Studing\\TestTask_LiftComplex\\TestTask_LiftComplex\\DictionaryOfOrganizationsAndEmployees\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAvwJMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYBAAAAAAAAAAAkwNkAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T05:40:07.066Z",
               "EditorCaption": ""
