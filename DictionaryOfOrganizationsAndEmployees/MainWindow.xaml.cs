@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
 using System.IO;
+using Microsoft.Win32;
 
 namespace DictionaryOfOrganizationsAndEmployees
 {
@@ -232,37 +233,102 @@ namespace DictionaryOfOrganizationsAndEmployees
 
         private void SearchPersonButton_Click(object sender, RoutedEventArgs e)
         {
+            string searchText = SearchTextBox.Text;
+            if (string.IsNullOrEmpty(searchText)) return;
 
+            var filteredPeople = _people.Where(p =>
+                p.FullName.Contains(searchText) ||
+                p.Position.Contains(searchText) ||
+                p.PhoneNumber.Contains(searchText)).ToList();
+
+            PeopleListBox.ItemsSource = filteredPeople;
+            Log("Выполнен поиск сотрудников по: " + searchText);
         }
 
         private void ResetSearchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (OrganizationsListBox.SelectedItem is Organization selectedOrganization)
+            {
+                PeopleListBox.ItemsSource = selectedOrganization.People;
+            }
+            SearchTextBox.Text = "";
+            Log("Сброшен поиск");
         }
 
         private void AddPersonButton_Click(object sender, RoutedEventArgs e)
         {
+            if (OrganizationsListBox.SelectedItem is Organization selectedOrganization)
+            {
+                var person = new Person { FullName = "Новый сотрудник", Organization = selectedOrganization };
 
+                Dispatcher.Invoke(() => _people.Add(person));
+                Dispatcher.Invoke(() => selectedOrganization.People.Add(person));
+
+                SelectedOrganization = selectedOrganization;
+
+                Log("Добавлен сотрудник в организацию: " + selectedOrganization.Name);
+            }
         }
 
         private void DeletePersonButton_Click(object sender, RoutedEventArgs e)
         {
+            if (PeopleListBox.SelectedItem is Person selectedPerson && SelectedOrganization != null)
+            {
+                _people.Remove(selectedPerson);
+                selectedPerson.Organization.People.Remove(selectedPerson);
+                SelectedOrganization = SelectedOrganization;
 
+                Log("Удален сотрудник: " + selectedPerson.FullName);
+            }
         }
 
         private void EditPersonButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (PeopleListBox.SelectedItem is Person selectedPerson)
+            {
+                var editWindow = new EditPersonWindow(selectedPerson);
+                if (editWindow.ShowDialog() == true)
+                {
+                    Log("Изменен сотрудник: " + selectedPerson.FullName);
+                }
+            }
         }
 
         private void LoadPhotoButton_Click(object sender, RoutedEventArgs e)
         {
+            if (PeopleListBox.SelectedItem is Person selectedPerson)
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog
+                {
+                    Filter = "Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png"
+                };
 
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    selectedPerson.PhotoPath = openFileDialog.FileName;
+
+                    if (PeopleListBox.SelectedItem != null)
+                    {
+                        var selectedItemContainer = PeopleListBox.ItemContainerGenerator.ContainerFromItem(PeopleListBox.SelectedItem);
+                        if (selectedItemContainer is FrameworkElement frameworkElement)
+                        {
+                            var image = frameworkElement.FindName("PersonPhotoImage") as Image;
+                            if (image != null)
+                            {
+                                image.Source = new BitmapImage(new Uri(selectedPerson.PhotoPath));
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void ShowEmployeesButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (OrganizationsListBox.SelectedItem is Organization selectedOrganization)
+            {
+                PeopleListBox.ItemsSource = selectedOrganization.People;
+            }
         }
 
         private void Log(string message)
